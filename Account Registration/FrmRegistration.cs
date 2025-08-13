@@ -77,7 +77,24 @@ namespace Account_Registration
                 StudentInfoClass.Gender = "Unspecified";
             }
 
-                FrmConfirm studentConfirm = new FrmConfirm();
+            FrmConfirm studentConfirm = new FrmConfirm();
+
+            if (studentConfirm.ShowDialog() == DialogResult.OK)
+            {
+                FirstNameText.Clear();
+                MiddleNameText.Clear();
+                LastNameText.Clear();
+                AddressText.Clear();
+                AgeText.Clear();
+                ContactNoText.Clear();
+                StudentNoText.Clear();
+
+                ProgramCombo.SelectedIndex = -1;
+
+                MaleRB.Checked = false;
+                FemaleRB.Checked = false;
+                UnspecifiedRB.Checked = false;
+            }
             studentConfirm.Show();
             this.Hide();
         }

@@ -21,15 +21,51 @@ namespace Account_Registration
         public static long ContactNo = 0;
         public static long StudentNo = 0;
 
-        public static string GetFirstName(string txt) => FirstName;
-        public static string GetLastName(string txt) => LastName;
-        public static string GetMiddleName(string txt) => MiddleName;
-        public static string GetAddress(string txt) => Address;
-        public static string GetProgram(string txt) => Program;
-        public static string GetGender(string txt) => Gender;
-        public static long GetAge(long number) => Age;
-        public static long GetStudentNo(long number) => StudentNo;
-        public static long GetContactNo(long number) => ContactNo;
+        public static string GetFirstName(string txt)
+        {
+            StudentInfoClass.FirstName = txt;
+            return FirstName;
+        }
+        public static string GetLastName(string txt)
+        {
+            StudentInfoClass.LastName = txt;
+            return LastName;
+        }
+        public static string GetMiddleName(string txt)
+        {
+            StudentInfoClass.MiddleName = txt;
+            return MiddleName;
+        }
+        public static string GetAddress(string txt)
+        {
+            StudentInfoClass.Address = txt;
+            return Address;
+        }
+        public static string GetProgram(string txt)
+        {
+            StudentInfoClass.Program = txt;
+            return Program;
+        }
+        public static string GetGender(string txt)
+        {
+            StudentInfoClass.Gender = txt;
+            return Gender;
+        }
+        public static long GetAge(long number)
+        {
+            StudentInfoClass.Age = number;
+            return Age;
+        }
+        public static long GetStudentNo(long number)
+        {
+            StudentInfoClass.StudentNo = number;
+            return StudentNo;
+        }
+        public static long GetContactNo(long number)
+        {
+            StudentInfoClass.ContactNo = number;
+            return ContactNo;
+        }
 
 
     }

@@ -75,60 +75,59 @@ namespace Account_Registration
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            StudentInfoClass.SetFullName = FullName(LastNameText.Text,FirstNameText.Text, MiddleNameText.Text);
-            StudentInfoClass.SetStudentNo = (int)StudentNumber(StudentNoText.Text);
-            StudentInfoClass.SetProgram = ProgramCombo.Text;
-            StudentInfoClass.SetContactNo = (int)ContactNo(ContactNoText.Text);
-            StudentInfoClass.SetAge = Age(AgeText.Text);
-            StudentInfoClass.SetBirthday = BirthdayPicker.Value.ToString("yyyyMM-dd");
-
-            if (MaleRB.Checked)
+            try
             {
-                StudentInfoClass.SetGender = "Male";
+                StudentInfoClass.SetFullName = FullName(LastNameText.Text, FirstNameText.Text, MiddleNameText.Text);
+                StudentInfoClass.SetStudentNo = (int)StudentNumber(StudentNoText.Text);
+                StudentInfoClass.SetProgram = ProgramCombo.Text;
+                StudentInfoClass.SetContactNo = (int)ContactNo(ContactNoText.Text);
+                StudentInfoClass.SetAge = Age(AgeText.Text);
+                StudentInfoClass.SetBirthday = BirthdayPicker.Value.ToString("yyyyMM-dd");
+
+                if (MaleRB.Checked)
+                {
+                    StudentInfoClass.SetGender = "Male";
+                }
+                else if (FemaleRB.Checked)
+                {
+                    StudentInfoClass.SetGender = "Female";
+                }
+                else if (UnspecifiedRB.Checked)
+                {
+                    StudentInfoClass.SetGender = "Unspecified";
+                }
+
+                FrmConfirm studentConfirm = new FrmConfirm();
+                studentConfirm.ShowDialog();
             }
-            else if (FemaleRB.Checked)
+            catch (FormatException ex)
             {
-                StudentInfoClass.SetGender = "Female";
+                MessageBox.Show("Error: " + ex.Message);
             }
-            else if (UnspecifiedRB.Checked)
+            catch (ArgumentNullException ex)
             {
-                StudentInfoClass.SetGender = "Unspecified";
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            catch (OverflowException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
 
-
-            FrmConfirm studentConfirm = new FrmConfirm();
-            studentConfirm.ShowDialog();
+            this.Hide();
 
             //StudentInfoClass.FirstName = FirstNameText.Text;
             //StudentInfoClass.LastName = LastNameText.Text;
             //StudentInfoClass.MiddleName = MiddleNameText.Text;
-            
+
             //StudentInfoClass.Program = ProgramCombo.Text;
             //StudentInfoClass.Birthday = (BirthdayPicker.Value).ToString();
             //StudentInfoClass.Age = long.Parse(AgeText.Text);
             //StudentInfoClass.StudentNo = long.Parse(StudentNoText.Text);
             //StudentInfoClass.ContactNo = long.Parse(ContactNoText.Text);
-
-            
-
-
-            if (studentConfirm.ShowDialog() == DialogResult.OK)
-            {
-                FirstNameText.Clear();
-                MiddleNameText.Clear();
-                LastNameText.Clear();
-                AgeText.Clear();
-                ContactNoText.Clear();
-                StudentNoText.Clear();
-
-                ProgramCombo.SelectedIndex = -1;
-
-                MaleRB.Checked = false;
-                FemaleRB.Checked = false;
-                UnspecifiedRB.Checked = false;
-            }
-            studentConfirm.Show();
-            this.Hide();
         }
 
         private void AgeLabel_Click(object sender, EventArgs e)

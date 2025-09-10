@@ -31,8 +31,8 @@ namespace Account_Registration
             AgeLabel.ForeColor = ColorTranslator.FromHtml("#363636");
             GenderLabel.ForeColor = ColorTranslator.FromHtml("#363636");
             ContactNoLabel.ForeColor = ColorTranslator.FromHtml("#363636");
+            BirthdayLabel.ForeColor = ColorTranslator.FromHtml("#363636");
             AddressLabel.ForeColor = ColorTranslator.FromHtml("#363636");
-
         }
 
         public void ProgramComboBox()
@@ -98,5 +98,11 @@ namespace Account_Registration
             studentConfirm.Show();
             this.Hide();
         }
+
+        private void AgeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

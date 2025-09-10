@@ -14,6 +14,11 @@ namespace Account_Registration
     {
         private StudentInfoClass.DelegateText delegateFirstName, delegateMiddleName, delegateLastName, delegateAddress, delegateProgram, delegateGender;
 
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void FrmConfirm_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml("#F3F3F3");

@@ -47,6 +47,8 @@
             this.ContactNoResult = new System.Windows.Forms.Label();
             this.AddressResult = new System.Windows.Forms.Label();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.BirthdayResult = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -93,7 +95,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(35, 271);
+            this.label5.Location = new System.Drawing.Point(35, 300);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 18);
             this.label5.TabIndex = 4;
@@ -123,7 +125,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(35, 303);
+            this.label8.Location = new System.Drawing.Point(35, 332);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 18);
             this.label8.TabIndex = 7;
@@ -133,7 +135,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(35, 338);
+            this.label9.Location = new System.Drawing.Point(35, 367);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 18);
             this.label9.TabIndex = 8;
@@ -203,7 +205,7 @@
             // 
             this.GenderResult.AutoSize = true;
             this.GenderResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GenderResult.Location = new System.Drawing.Point(185, 271);
+            this.GenderResult.Location = new System.Drawing.Point(185, 300);
             this.GenderResult.Name = "GenderResult";
             this.GenderResult.Size = new System.Drawing.Size(54, 18);
             this.GenderResult.TabIndex = 15;
@@ -213,7 +215,7 @@
             // 
             this.ContactNoResult.AutoSize = true;
             this.ContactNoResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactNoResult.Location = new System.Drawing.Point(185, 303);
+            this.ContactNoResult.Location = new System.Drawing.Point(185, 332);
             this.ContactNoResult.Name = "ContactNoResult";
             this.ContactNoResult.Size = new System.Drawing.Size(54, 18);
             this.ContactNoResult.TabIndex = 16;
@@ -223,7 +225,7 @@
             // 
             this.AddressResult.AutoSize = true;
             this.AddressResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressResult.Location = new System.Drawing.Point(185, 338);
+            this.AddressResult.Location = new System.Drawing.Point(185, 367);
             this.AddressResult.Name = "AddressResult";
             this.AddressResult.Size = new System.Drawing.Size(54, 18);
             this.AddressResult.TabIndex = 17;
@@ -233,7 +235,7 @@
             // 
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitButton.Location = new System.Drawing.Point(306, 384);
+            this.SubmitButton.Location = new System.Drawing.Point(309, 427);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(115, 41);
             this.SubmitButton.TabIndex = 18;
@@ -241,11 +243,34 @@
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
+            // BirthdayResult
+            // 
+            this.BirthdayResult.AutoSize = true;
+            this.BirthdayResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirthdayResult.Location = new System.Drawing.Point(185, 269);
+            this.BirthdayResult.Name = "BirthdayResult";
+            this.BirthdayResult.Size = new System.Drawing.Size(54, 18);
+            this.BirthdayResult.TabIndex = 20;
+            this.BirthdayResult.Text = "label10";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(35, 269);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 18);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Birthday:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
             // FrmConfirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 450);
+            this.ClientSize = new System.Drawing.Size(453, 512);
+            this.Controls.Add(this.BirthdayResult);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.AddressResult);
             this.Controls.Add(this.ContactNoResult);
@@ -294,5 +319,7 @@
         private System.Windows.Forms.Label ContactNoResult;
         private System.Windows.Forms.Label AddressResult;
         private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.Label BirthdayResult;
+        private System.Windows.Forms.Label label11;
     }
 }

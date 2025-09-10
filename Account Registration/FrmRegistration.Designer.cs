@@ -52,6 +52,8 @@
             this.MaleRB = new System.Windows.Forms.RadioButton();
             this.FemaleRB = new System.Windows.Forms.RadioButton();
             this.UnspecifiedRB = new System.Windows.Forms.RadioButton();
+            this.BirthdayLabel = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // StudentNoLabel
@@ -162,9 +164,9 @@
             // 
             this.AgeText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AgeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeText.Location = new System.Drawing.Point(15, 302);
+            this.AgeText.Location = new System.Drawing.Point(325, 308);
             this.AgeText.Name = "AgeText";
-            this.AgeText.Size = new System.Drawing.Size(289, 22);
+            this.AgeText.Size = new System.Drawing.Size(287, 22);
             this.AgeText.TabIndex = 12;
             // 
             // ContactNoLabel
@@ -181,17 +183,18 @@
             // 
             this.AgeLabel.AutoSize = true;
             this.AgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeLabel.Location = new System.Drawing.Point(11, 281);
+            this.AgeLabel.Location = new System.Drawing.Point(320, 284);
             this.AgeLabel.Name = "AgeLabel";
             this.AgeLabel.Size = new System.Drawing.Size(35, 16);
             this.AgeLabel.TabIndex = 10;
             this.AgeLabel.Text = "Age";
+            this.AgeLabel.Click += new System.EventHandler(this.AgeLabel_Click);
             // 
             // AddressLabel
             // 
             this.AddressLabel.AutoSize = true;
             this.AddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressLabel.Location = new System.Drawing.Point(14, 338);
+            this.AddressLabel.Location = new System.Drawing.Point(14, 405);
             this.AddressLabel.Name = "AddressLabel";
             this.AddressLabel.Size = new System.Drawing.Size(65, 16);
             this.AddressLabel.TabIndex = 14;
@@ -201,7 +204,7 @@
             // 
             this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextButton.Location = new System.Drawing.Point(474, 491);
+            this.NextButton.Location = new System.Drawing.Point(474, 552);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(138, 39);
             this.NextButton.TabIndex = 16;
@@ -247,7 +250,7 @@
             this.AddressText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AddressText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddressText.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.AddressText.Location = new System.Drawing.Point(17, 361);
+            this.AddressText.Location = new System.Drawing.Point(17, 424);
             this.AddressText.Name = "AddressText";
             this.AddressText.Size = new System.Drawing.Size(595, 103);
             this.AddressText.TabIndex = 22;
@@ -257,7 +260,7 @@
             // 
             this.GenderLabel.AutoSize = true;
             this.GenderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GenderLabel.Location = new System.Drawing.Point(325, 281);
+            this.GenderLabel.Location = new System.Drawing.Point(16, 342);
             this.GenderLabel.Name = "GenderLabel";
             this.GenderLabel.Size = new System.Drawing.Size(58, 16);
             this.GenderLabel.TabIndex = 23;
@@ -267,7 +270,7 @@
             // 
             this.MaleRB.AutoSize = true;
             this.MaleRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaleRB.Location = new System.Drawing.Point(329, 304);
+            this.MaleRB.Location = new System.Drawing.Point(20, 365);
             this.MaleRB.Name = "MaleRB";
             this.MaleRB.Size = new System.Drawing.Size(55, 20);
             this.MaleRB.TabIndex = 24;
@@ -279,7 +282,7 @@
             // 
             this.FemaleRB.AutoSize = true;
             this.FemaleRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FemaleRB.Location = new System.Drawing.Point(413, 304);
+            this.FemaleRB.Location = new System.Drawing.Point(104, 365);
             this.FemaleRB.Name = "FemaleRB";
             this.FemaleRB.Size = new System.Drawing.Size(71, 20);
             this.FemaleRB.TabIndex = 25;
@@ -291,7 +294,7 @@
             // 
             this.UnspecifiedRB.AutoSize = true;
             this.UnspecifiedRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UnspecifiedRB.Location = new System.Drawing.Point(515, 304);
+            this.UnspecifiedRB.Location = new System.Drawing.Point(206, 365);
             this.UnspecifiedRB.Name = "UnspecifiedRB";
             this.UnspecifiedRB.Size = new System.Drawing.Size(97, 20);
             this.UnspecifiedRB.TabIndex = 26;
@@ -299,12 +302,32 @@
             this.UnspecifiedRB.Text = "Unspecified";
             this.UnspecifiedRB.UseVisualStyleBackColor = true;
             // 
+            // BirthdayLabel
+            // 
+            this.BirthdayLabel.AutoSize = true;
+            this.BirthdayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirthdayLabel.Location = new System.Drawing.Point(11, 284);
+            this.BirthdayLabel.Name = "BirthdayLabel";
+            this.BirthdayLabel.Size = new System.Drawing.Size(64, 16);
+            this.BirthdayLabel.TabIndex = 27;
+            this.BirthdayLabel.Text = "Birthday";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(14, 308);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(287, 20);
+            this.dateTimePicker1.TabIndex = 28;
+            // 
             // FrmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(638, 542);
+            this.ClientSize = new System.Drawing.Size(638, 622);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.BirthdayLabel);
             this.Controls.Add(this.UnspecifiedRB);
             this.Controls.Add(this.FemaleRB);
             this.Controls.Add(this.MaleRB);
@@ -363,6 +386,8 @@
         private System.Windows.Forms.RadioButton MaleRB;
         private System.Windows.Forms.RadioButton FemaleRB;
         private System.Windows.Forms.RadioButton UnspecifiedRB;
+        private System.Windows.Forms.Label BirthdayLabel;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 

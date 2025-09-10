@@ -40,17 +40,17 @@ namespace Account_Registration
             delegateProgram = new StudentInfoClass.DelegateText(StudentInfoClass.GetProgram);
             delegateGender = new StudentInfoClass.DelegateText(StudentInfoClass.GetGender);
             delegateBirthday = new StudentInfoClass.DelegateText(StudentInfoClass.GetBirthday);
-            delegateAge = new StudentInfoClass.DelegateNumber(StudentInfoClass.GetAge);
+            /*delegateAge = new StudentInfoClass.DelegateNumber(StudentInfoClass.GetAge);
             delegateStudentNumber = new StudentInfoClass.DelegateNumber(StudentInfoClass.GetStudentNo);
-            delegateContactNumber = new StudentInfoClass.DelegateNumber(StudentInfoClass.GetContactNo);
+            delegateContactNumber = new StudentInfoClass.DelegateNumber(StudentInfoClass.GetContactNo);*/
 
-            StudentNoResult.Text = delegateStudentNumber(StudentInfoClass.StudentNo).ToString();
+            //StudentNoResult.Text = delegateStudentNumber(StudentInfoClass.StudentNo).ToString();
             ProgramResult.Text = delegateProgram(StudentInfoClass.Program);
             NameResult.Text = delegateLastName(StudentInfoClass.LastName + " , " + StudentInfoClass.FirstName + " , " + StudentInfoClass.MiddleName);
             GenderResult.Text = delegateGender(StudentInfoClass.Gender);
             BirthdayResult.Text = delegateBirthday(StudentInfoClass.Birthday);
-            AgeResult.Text = delegateAge(StudentInfoClass.Age).ToString();
-            ContactNoResult.Text = delegateContactNumber(StudentInfoClass.ContactNo).ToString();
+            //AgeResult.Text = delegateAge(StudentInfoClass.Age).ToString();
+            //ContactNoResult.Text = delegateContactNumber(StudentInfoClass.ContactNo).ToString();
             AddressResult.Text = delegateAddress(StudentInfoClass.Address);
         }
 

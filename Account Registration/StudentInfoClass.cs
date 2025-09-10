@@ -18,9 +18,9 @@ namespace Account_Registration
         public static string Address = " ";
         public static string Program = " ";
         public static string Birthday = " ";
-        public static long Age = 0;
+        /*public static long Age = 0;
         public static long ContactNo = 0;
-        public static long StudentNo = 0;
+        public static long StudentNo = 0;*/
 
         public static string GetFirstName(string txt)
         {
@@ -58,7 +58,7 @@ namespace Account_Registration
             StudentInfoClass.Gender = txt;
             return Gender;
         }
-        public static long GetAge(long number)
+       /* public static long GetAge(long number)
         {
             StudentInfoClass.Age = number;
             return Age;
@@ -72,7 +72,7 @@ namespace Account_Registration
         {
             StudentInfoClass.ContactNo = number;
             return ContactNo;
-        }
+        }*/
 
 
     }

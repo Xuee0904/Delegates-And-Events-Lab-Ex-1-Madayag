@@ -12,7 +12,7 @@ namespace Account_Registration
 {
     public partial class FrmConfirm : Form
     {
-        private StudentInfoClass.DelegateText delegateFirstName, delegateMiddleName, delegateLastName, delegateAddress, delegateProgram, delegateGender;
+        private StudentInfoClass.DelegateText delegateFirstName, delegateMiddleName, delegateLastName, delegateAddress, delegateProgram, delegateGender, delegateBirthday;
 
         private void label11_Click(object sender, EventArgs e)
         {
@@ -39,6 +39,7 @@ namespace Account_Registration
             delegateAddress = new StudentInfoClass.DelegateText(StudentInfoClass.GetAddress);
             delegateProgram = new StudentInfoClass.DelegateText(StudentInfoClass.GetProgram);
             delegateGender = new StudentInfoClass.DelegateText(StudentInfoClass.GetGender);
+            delegateBirthday = new StudentInfoClass.DelegateText(StudentInfoClass.GetBirthday);
             delegateAge = new StudentInfoClass.DelegateNumber(StudentInfoClass.GetAge);
             delegateStudentNumber = new StudentInfoClass.DelegateNumber(StudentInfoClass.GetStudentNo);
             delegateContactNumber = new StudentInfoClass.DelegateNumber(StudentInfoClass.GetContactNo);
@@ -49,6 +50,7 @@ namespace Account_Registration
             MiddleNameResult.Text = delegateMiddleName(StudentInfoClass.MiddleName);
             LastNameResult.Text = delegateLastName(StudentInfoClass.LastName);
             GenderResult.Text = delegateGender(StudentInfoClass.Gender);
+            BirthdayResult.Text = delegateBirthday(StudentInfoClass.Birthday);
             AgeResult.Text = delegateAge(StudentInfoClass.Age).ToString();
             ContactNoResult.Text = delegateContactNumber(StudentInfoClass.ContactNo).ToString();
             AddressResult.Text = delegateAddress(StudentInfoClass.Address);

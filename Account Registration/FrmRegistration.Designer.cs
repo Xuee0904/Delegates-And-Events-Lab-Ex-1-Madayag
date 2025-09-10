@@ -53,7 +53,7 @@
             this.FemaleRB = new System.Windows.Forms.RadioButton();
             this.UnspecifiedRB = new System.Windows.Forms.RadioButton();
             this.BirthdayLabel = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.BirthdayPicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // StudentNoLabel
@@ -312,13 +312,13 @@
             this.BirthdayLabel.TabIndex = 27;
             this.BirthdayLabel.Text = "Birthday";
             // 
-            // dateTimePicker1
+            // BirthdayPicker
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 308);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(287, 20);
-            this.dateTimePicker1.TabIndex = 28;
+            this.BirthdayPicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirthdayPicker.Location = new System.Drawing.Point(14, 308);
+            this.BirthdayPicker.Name = "BirthdayPicker";
+            this.BirthdayPicker.Size = new System.Drawing.Size(287, 20);
+            this.BirthdayPicker.TabIndex = 28;
             // 
             // FrmRegistration
             // 
@@ -326,7 +326,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(638, 622);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.BirthdayPicker);
             this.Controls.Add(this.BirthdayLabel);
             this.Controls.Add(this.UnspecifiedRB);
             this.Controls.Add(this.FemaleRB);
@@ -387,7 +387,7 @@
         private System.Windows.Forms.RadioButton FemaleRB;
         private System.Windows.Forms.RadioButton UnspecifiedRB;
         private System.Windows.Forms.Label BirthdayLabel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker BirthdayPicker;
     }
 }
 

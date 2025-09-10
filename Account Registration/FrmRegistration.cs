@@ -60,6 +60,7 @@ namespace Account_Registration
             StudentInfoClass.MiddleName = MiddleNameText.Text;
             StudentInfoClass.Address = AddressText.Text;
             StudentInfoClass.Program = ProgramCombo.Text;
+            StudentInfoClass.Birthday = (BirthdayPicker.Value).ToString();
             StudentInfoClass.Age = long.Parse(AgeText.Text);
             StudentInfoClass.StudentNo = long.Parse(StudentNoText.Text);
             StudentInfoClass.ContactNo = long.Parse(ContactNoText.Text);

@@ -17,6 +17,7 @@ namespace Account_Registration
         public static string Gender = " ";
         public static string Address = " ";
         public static string Program = " ";
+        public static string Birthday = " ";
         public static long Age = 0;
         public static long ContactNo = 0;
         public static long StudentNo = 0;
@@ -45,6 +46,12 @@ namespace Account_Registration
         {
             StudentInfoClass.Program = txt;
             return Program;
+        }
+
+        public static string GetBirthday(string txt)
+        {
+            StudentInfoClass.Birthday = txt;
+            return Birthday;
         }
         public static string GetGender(string txt)
         {

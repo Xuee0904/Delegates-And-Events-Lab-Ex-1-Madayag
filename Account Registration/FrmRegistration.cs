@@ -33,19 +33,28 @@ namespace Account_Registration
             ContactNoLabel.ForeColor = ColorTranslator.FromHtml("#363636");
             BirthdayLabel.ForeColor = ColorTranslator.FromHtml("#363636");
             AddressLabel.ForeColor = ColorTranslator.FromHtml("#363636");
+
+            string[] ListOfPrograms = new string[]
+            {
+                "Bachelor of Science in Accountancy (BSA)",
+                "Bachelor of Science in Business Administration (BSBA)",
+                "Bachelor of Science in Computer Science (BSCS)",
+                "Bachelor of Science in Computer Engineering (BSCPE)",
+                "Bachelor of Science in Hospitality Management (BSHM)",
+                "Bachelor of Science in Information Technology (BSIT)",
+                "Bachelor of Science in Nursing (BSN)",
+                "Bachelor of Science in Psychology (BS Psychology)",
+                "Bachelor of Science in Tourism Management (BSTM)"
+        };
+            for (int i = 0; i < 9; i++)
+            {
+                ProgramCombo.Items.Add(ListOfPrograms[i].ToString());
+            }
         }
 
         public void ProgramComboBox()
         {
-            ProgramCombo.Items.Add("Bachelor of Science in Accountancy (BSA)");
-            ProgramCombo.Items.Add("Bachelor of Science in Business Administration (BSBA)");
-            ProgramCombo.Items.Add("Bachelor of Science in Computer Science (BSCS)");
-            ProgramCombo.Items.Add("Bachelor of Science in Computer Engineering (BSCPE)");
-            ProgramCombo.Items.Add("Bachelor of Science in Hospitality Management (BSHM)");
-            ProgramCombo.Items.Add("Bachelor of Science in Information Technology (BSIT)");
-            ProgramCombo.Items.Add("Bachelor of Science in Nursing (BSN)");
-            ProgramCombo.Items.Add("Bachelor of Science in Psychology (BS Psychology)");
-            ProgramCombo.Items.Add("Bachelor of Science in Tourism Management (BSTM)");
+       
         }
 
         private void FrmRegistration_Load(object sender, EventArgs e)

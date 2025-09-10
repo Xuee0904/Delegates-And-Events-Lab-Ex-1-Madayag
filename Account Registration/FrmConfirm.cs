@@ -46,9 +46,7 @@ namespace Account_Registration
 
             StudentNoResult.Text = delegateStudentNumber(StudentInfoClass.StudentNo).ToString();
             ProgramResult.Text = delegateProgram(StudentInfoClass.Program);
-            FirstNameResult.Text = delegateFirstName(StudentInfoClass.FirstName);
-            MiddleNameResult.Text = delegateMiddleName(StudentInfoClass.MiddleName);
-            LastNameResult.Text = delegateLastName(StudentInfoClass.LastName);
+            NameResult.Text = delegateLastName(StudentInfoClass.LastName + " , " + StudentInfoClass.FirstName + " , " + StudentInfoClass.MiddleName);
             GenderResult.Text = delegateGender(StudentInfoClass.Gender);
             BirthdayResult.Text = delegateBirthday(StudentInfoClass.Birthday);
             AgeResult.Text = delegateAge(StudentInfoClass.Age).ToString();

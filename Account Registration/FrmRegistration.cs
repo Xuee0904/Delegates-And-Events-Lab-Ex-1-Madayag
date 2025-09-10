@@ -15,6 +15,8 @@ namespace Account_Registration
 {
     public partial class FrmRegistration : Form
     {
+        StudentInfoClass studentInfoClass;
+
         private string _FullName;
         private int _Age;
         private long _ContactNo;
@@ -24,6 +26,8 @@ namespace Account_Registration
         {
             InitializeComponent();
             ProgramComboBox();
+
+            studentInfoClass = new StudentInfoClass();
 
             NextButton.BackColor = ColorTranslator.FromHtml("#3A5A40");
             NextButton.ForeColor = ColorTranslator.FromHtml("#DFE6DA");
@@ -40,7 +44,6 @@ namespace Account_Registration
             GenderLabel.ForeColor = ColorTranslator.FromHtml("#363636");
             ContactNoLabel.ForeColor = ColorTranslator.FromHtml("#363636");
             BirthdayLabel.ForeColor = ColorTranslator.FromHtml("#363636");
-            AddressLabel.ForeColor = ColorTranslator.FromHtml("#363636");
 
             string[] ListOfPrograms = new string[]
             {
@@ -72,37 +75,48 @@ namespace Account_Registration
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            StudentInfoClass.FirstName = FirstNameText.Text;
-            StudentInfoClass.LastName = LastNameText.Text;
-            StudentInfoClass.MiddleName = MiddleNameText.Text;
-            StudentInfoClass.Address = AddressText.Text;
-            StudentInfoClass.Program = ProgramCombo.Text;
-            StudentInfoClass.Birthday = (BirthdayPicker.Value).ToString();
-            /*StudentInfoClass.Age = long.Parse(AgeText.Text);
-            StudentInfoClass.StudentNo = long.Parse(StudentNoText.Text);
-            StudentInfoClass.ContactNo = long.Parse(ContactNoText.Text);*/
+            StudentInfoClass.SetFullName = FullName(LastNameText.Text,FirstNameText.Text, MiddleNameText.Text);
+            StudentInfoClass.SetStudentNo = (int)StudentNumber(StudentNoText.Text);
+            StudentInfoClass.SetProgram = ProgramCombo.Text;
+            StudentInfoClass.SetContactNo = (int)ContactNo(ContactNoText.Text);
+            StudentInfoClass.SetAge = Age(AgeText.Text);
+            StudentInfoClass.SetBirthday = BirthdayPicker.Value.ToString("yyyyMM-dd");
 
             if (MaleRB.Checked)
             {
-                StudentInfoClass.Gender = "Male";
+                StudentInfoClass.SetGender = "Male";
             }
             else if (FemaleRB.Checked)
             {
-                StudentInfoClass.Gender = "Female";
+                StudentInfoClass.SetGender = "Female";
             }
             else if (UnspecifiedRB.Checked)
             {
-                StudentInfoClass.Gender = "Unspecified";
+                StudentInfoClass.SetGender = "Unspecified";
             }
 
+
             FrmConfirm studentConfirm = new FrmConfirm();
+            studentConfirm.ShowDialog();
+
+            //StudentInfoClass.FirstName = FirstNameText.Text;
+            //StudentInfoClass.LastName = LastNameText.Text;
+            //StudentInfoClass.MiddleName = MiddleNameText.Text;
+            
+            //StudentInfoClass.Program = ProgramCombo.Text;
+            //StudentInfoClass.Birthday = (BirthdayPicker.Value).ToString();
+            //StudentInfoClass.Age = long.Parse(AgeText.Text);
+            //StudentInfoClass.StudentNo = long.Parse(StudentNoText.Text);
+            //StudentInfoClass.ContactNo = long.Parse(ContactNoText.Text);
+
+            
+
 
             if (studentConfirm.ShowDialog() == DialogResult.OK)
             {
                 FirstNameText.Clear();
                 MiddleNameText.Clear();
                 LastNameText.Clear();
-                AddressText.Clear();
                 AgeText.Clear();
                 ContactNoText.Clear();
                 StudentNoText.Clear();

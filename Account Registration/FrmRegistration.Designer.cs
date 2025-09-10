@@ -42,12 +42,10 @@
             this.AgeText = new System.Windows.Forms.TextBox();
             this.ContactNoLabel = new System.Windows.Forms.Label();
             this.AgeLabel = new System.Windows.Forms.Label();
-            this.AddressLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.AddressText = new System.Windows.Forms.RichTextBox();
             this.GenderLabel = new System.Windows.Forms.Label();
             this.MaleRB = new System.Windows.Forms.RadioButton();
             this.FemaleRB = new System.Windows.Forms.RadioButton();
@@ -190,23 +188,13 @@
             this.AgeLabel.Text = "Age";
             this.AgeLabel.Click += new System.EventHandler(this.AgeLabel_Click);
             // 
-            // AddressLabel
-            // 
-            this.AddressLabel.AutoSize = true;
-            this.AddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressLabel.Location = new System.Drawing.Point(14, 405);
-            this.AddressLabel.Name = "AddressLabel";
-            this.AddressLabel.Size = new System.Drawing.Size(65, 16);
-            this.AddressLabel.TabIndex = 14;
-            this.AddressLabel.Text = "Address";
-            // 
             // NextButton
             // 
             this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextButton.Location = new System.Drawing.Point(474, 552);
+            this.NextButton.Location = new System.Drawing.Point(456, 428);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(138, 39);
+            this.NextButton.Size = new System.Drawing.Size(156, 39);
             this.NextButton.TabIndex = 16;
             this.NextButton.Text = "Next>";
             this.NextButton.UseVisualStyleBackColor = true;
@@ -244,17 +232,6 @@
             this.label4.Size = new System.Drawing.Size(182, 22);
             this.label4.TabIndex = 21;
             this.label4.Text = "Personal Information";
-            // 
-            // AddressText
-            // 
-            this.AddressText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddressText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressText.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.AddressText.Location = new System.Drawing.Point(17, 424);
-            this.AddressText.Name = "AddressText";
-            this.AddressText.Size = new System.Drawing.Size(595, 103);
-            this.AddressText.TabIndex = 22;
-            this.AddressText.Text = "";
             // 
             // GenderLabel
             // 
@@ -325,19 +302,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(638, 622);
+            this.ClientSize = new System.Drawing.Size(638, 515);
             this.Controls.Add(this.BirthdayPicker);
             this.Controls.Add(this.BirthdayLabel);
             this.Controls.Add(this.UnspecifiedRB);
             this.Controls.Add(this.FemaleRB);
             this.Controls.Add(this.MaleRB);
             this.Controls.Add(this.GenderLabel);
-            this.Controls.Add(this.AddressText);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NextButton);
-            this.Controls.Add(this.AddressLabel);
             this.Controls.Add(this.ContactNoText);
             this.Controls.Add(this.AgeText);
             this.Controls.Add(this.ContactNoLabel);
@@ -376,12 +351,10 @@
         private System.Windows.Forms.TextBox AgeText;
         private System.Windows.Forms.Label ContactNoLabel;
         private System.Windows.Forms.Label AgeLabel;
-        private System.Windows.Forms.Label AddressLabel;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox AddressText;
         private System.Windows.Forms.Label GenderLabel;
         private System.Windows.Forms.RadioButton MaleRB;
         private System.Windows.Forms.RadioButton FemaleRB;

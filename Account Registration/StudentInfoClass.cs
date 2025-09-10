@@ -8,7 +8,16 @@ namespace Account_Registration
 {
     internal class StudentInfoClass
     {
-        public delegate long DelegateNumber(long number);
+        public static int SetStudentNo = 0;
+        public static int SetContactNo = 0;
+        public static int SetAge = 0;
+        public static string SetProgram = " ";
+        public static string SetGender = " ";
+        public static string SetBirthday = " ";
+        public static string SetFullName = " ";
+        public static string SetAddress = " ";
+
+        /*public delegate long DelegateNumber(long number);
         public delegate string DelegateText(string txt);
 
         public static string FirstName = " ";
@@ -18,9 +27,9 @@ namespace Account_Registration
         public static string Address = " ";
         public static string Program = " ";
         public static string Birthday = " ";
-        /*public static long Age = 0;
+        public static long Age = 0;
         public static long ContactNo = 0;
-        public static long StudentNo = 0;*/
+        public static long StudentNo = 0;
 
         public static string GetFirstName(string txt)
         {
@@ -58,7 +67,7 @@ namespace Account_Registration
             StudentInfoClass.Gender = txt;
             return Gender;
         }
-       /* public static long GetAge(long number)
+        public static long GetAge(long number)
         {
             StudentInfoClass.Age = number;
             return Age;

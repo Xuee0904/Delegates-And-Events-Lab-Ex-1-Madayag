@@ -33,6 +33,14 @@ namespace Account_Registration
             SubmitButton.BackColor = ColorTranslator.FromHtml("#3A5A40");
             SubmitButton.ForeColor = ColorTranslator.FromHtml("#DFE6DA");
 
+            StudentNoResult.Text = StudentInfoClass.SetStudentNo.ToString();
+            NameResult.Text = StudentInfoClass.SetFullName;
+            ProgramResult.Text = StudentInfoClass.SetProgram;
+            BirthdayResult.Text = StudentInfoClass.SetBirthday;
+            GenderResult.Text = StudentInfoClass.SetGender;
+            ContactNoResult.Text = StudentInfoClass.SetContactNo.ToString();
+            AgeResult.Text = StudentInfoClass.SetAge.ToString();
+
             //delegateFirstName = new StudentInfoClass.DelegateText(StudentInfoClass.GetFirstName);
             //delegateMiddleName = new StudentInfoClass.DelegateText(StudentInfoClass.GetMiddleName);
             //delegateLastName = new StudentInfoClass.DelegateText(StudentInfoClass.GetLastName);
